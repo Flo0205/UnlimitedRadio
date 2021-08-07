@@ -1,0 +1,16 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExamplePlugin", "ExamplePlugin.csproj", "{B09F710A-C51C-46BE-B266-1D9FA91D6858}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B09F710A-C51C-46BE-B266-1D9FA91D6858}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B09F710A-C51C-46BE-B266-1D9FA91D6858}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B09F710A-C51C-46BE-B266-1D9FA91D6858}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B09F710A-C51C-46BE-B266-1D9FA91D6858}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
