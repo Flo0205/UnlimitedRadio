@@ -2,11 +2,12 @@
 
     <PropertyGroup>
         <TargetFramework>net472</TargetFramework>
-        <RootNamespace>Example_Plugin</RootNamespace>
+        <RootNamespace>UnlimitedRadio</RootNamespace>
+        <AssemblyName>UnlimitedRadio</AssemblyName>
     </PropertyGroup>
 
     <ItemGroup>
-      <PackageReference Include="SynapseSL" Version="2.6.0" />
+      <PackageReference Include="SynapseSL" Version="2.7.2" />
     </ItemGroup>
 
 </Project>

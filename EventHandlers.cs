@@ -1,27 +1,26 @@
-﻿using Synapse;
+﻿using System.Linq;
+using Synapse;
+using Synapse.Api;
+using Synapse.Api.Items;
 
-namespace Example_Plugin
+namespace UnlimitedRadio
 {
     public class EventHandlers
     {
         public EventHandlers()
         {
-            //You can also use SynapseController.Server to get the Server!
-            Server.Get.Events.Player.PlayerJoinEvent += OnJoin;
-            Server.Get.Events.Round.RoundStartEvent += OnStart;
+            Server.Get.Events.Server.UpdateEvent += OnUpdate;
         }
 
-        private void OnStart()
+        private void OnUpdate()
         {
-            foreach(var player in Server.Get.Players)
+            foreach (Player p in SynapseController.Server.Players)
             {
-                player.GiveTextHint("The Round started!");
+                foreach (SynapseItem radio in p.Inventory.Items.Where(i => i.ItemCategory == ItemCategory.Radio))
+                {
+                    radio.Durabillity = 100;
+                }
             }
-        }
-
-        private void OnJoin(Synapse.Api.Events.SynapseEventArguments.PlayerJoinEventArgs ev)
-        {
-            ev.Player.SendConsoleMessage(PluginClass.Config.consoleMessage);
         }
     }
 }
